@@ -1,13 +1,21 @@
+//
+//  ZZAchievementsViewModel.swift
+//  Moro Drift
+//
+//  Created by Dias Atudinov on 21.10.2025.
+//
+
+
 import SwiftUI
 
 class ZZAchievementsViewModel: ObservableObject {
     
     @Published var achievements: [NEGAchievement] = [
-        NEGAchievement(image: "achieve1ImageOF", title: "achieve1TextOF", isAchieved: false),
-        NEGAchievement(image: "achieve2ImageOF", title: "achieve2TextOF", isAchieved: false),
-        NEGAchievement(image: "achieve3ImageOF", title: "achieve3TextOF", isAchieved: false),
-        NEGAchievement(image: "achieve4ImageOF", title: "achieve4TextOF", isAchieved: false),
-        NEGAchievement(image: "achieve5ImageOF", title: "achieve5TextOF", isAchieved: false),
+        NEGAchievement(image: "achieve1ImageMD", title: "achieve1TextMD", isAchieved: false),
+        NEGAchievement(image: "achieve2ImageMD", title: "achieve2TextMD", isAchieved: false),
+        NEGAchievement(image: "achieve3ImageMD", title: "achieve3TextMD", isAchieved: false),
+        NEGAchievement(image: "achieve4ImageMD", title: "achieve4TextMD", isAchieved: false),
+        NEGAchievement(image: "achieve5ImageMD", title: "achieve5TextMD", isAchieved: false),
     ] {
         didSet {
             saveAchievementsItem()
@@ -18,7 +26,7 @@ class ZZAchievementsViewModel: ObservableObject {
         loadAchievementsItem()
     }
     
-    private let userDefaultsAchievementsKey = "achievementsKeyOF"
+    private let userDefaultsAchievementsKey = "achievementsKeyMD"
     
     func achieveToggle(_ achive: NEGAchievement) {
         guard let index = achievements.firstIndex(where: { $0.id == achive.id })
