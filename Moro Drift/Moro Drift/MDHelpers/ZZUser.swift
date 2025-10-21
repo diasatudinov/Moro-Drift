@@ -1,3 +1,10 @@
+//
+//  ZZUser.swift
+//  Moro Drift
+//
+//
+
+
 import SwiftUI
 
 class ZZUser: ObservableObject {
