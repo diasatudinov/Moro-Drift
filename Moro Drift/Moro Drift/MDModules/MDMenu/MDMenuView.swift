@@ -110,7 +110,7 @@ struct MDMenuView: View {
                 }
             )
             .fullScreenCover(isPresented: $showGame) {
-                //                    GameRootView()
+                GameView()
             }
             .fullScreenCover(isPresented: $showAchievement) {
                 MDAchievementsView()
